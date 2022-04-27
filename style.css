@@ -1,0 +1,374 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+body {
+	background: #ebf0f2;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+
+}
+
+.dialog {
+	width: 320px;
+	height: 533px;
+}
+
+.container {
+	background-color: #ffffff;
+	padding: 8px;
+	max-width: 320px;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.dialog__top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 7px;
+}
+
+.dialog__btn-settings,
+.dialog__btn-exit {
+	color: #ffffff;
+	padding: 7px;
+	border: 1px solid #000000;
+	background: linear-gradient(90deg, #39aea9 0, #4580b3 100%) no-repeat;
+	border: 1px solid #39aea9;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+}
+
+.dialog__message-box {
+	height: 445px;
+	overflow: scroll;
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	align-items: flex-end;
+}
+
+.dialog__message {
+	display: flex;
+	flex-direction: column;
+	padding: 8px;
+	max-width: 272px;
+}
+
+.dialog__message+.dialog__message {
+	margin-top: 8px;
+}
+
+.dialog__delivered_message {
+	background-color: #E5E5E5;
+}
+
+.dialog__send_message {
+	background-color: #F7F7F7;
+}
+
+.message-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 4px
+}
+
+.message-inner .userNoSelect {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.dialog__message-text {
+	word-break: break-word;
+}
+
+.dialog__message-time {
+	align-self: flex-end;
+	margin-top: 4px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.dialog__personal_message {
+	align-self: flex-end;
+
+}
+
+.dialog__someone_message {
+	align-self: flex-start;
+}
+
+.dialog__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.dialog__message-input {
+	width: 267px;
+	padding: 7px;
+	height: 32px;
+	background-color: inherit;
+	border: 1px solid #000;
+	outline: none;
+}
+
+.dialog__message-submit {
+	width: 29px;
+	height: 32px;
+	border: 1px solid #000;
+	color: #FFFFFF;
+	background: linear-gradient(90deg, #39aea9 0, #4580b3 100%) no-repeat;
+	border: 1px solid #39aea9;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+}
+
+.dialog__message-box {
+	border: 1px solid #000000;
+
+	padding: 8px;
+	margin-bottom: 8px;
+}
+
+.dialog__message-box::-webkit-scrollbar {
+	width: 0 ! important
+}
+
+.settings {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+}
+
+.settings-container {
+	background: #FFFFFF;
+	padding: 12px 12px 0px 15px;
+	width: 273px;
+	height: 319px;
+	box-shadow: 4px 4px 4px #4f4f4f;
+
+}
+
+.settings__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.settings__close {
+	width: 16px;
+	height: 16px;
+	background-image: url("./img/close-icon.svg");
+	background-position: center;
+}
+
+.settings__bottom {
+	margin-top: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.settings__input {
+	width: 207px;
+	height: 32px;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+}
+
+.settings__submit {
+	width: 30px;
+	height: 32px;
+	border: 1px solid #000;
+	color: #FFFFFF;
+	background: linear-gradient(90deg, #39aea9 0, #4580b3 100%) no-repeat;
+	border: 1px solid #39aea9;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+}
+
+.settings__text {
+	opacity: 100%;
+}
+
+.authorization {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+}
+
+.authorization-container {
+	background: #FFFFFF;
+	padding: 12px 12px 0px 15px;
+	width: 273px;
+	height: 319px;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.authorization__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 70px;
+}
+
+.authorization__close {
+	width: 16px;
+	height: 16px;
+	background-image: url("./img/close-icon.svg");
+	background-position: center;
+}
+
+.authorization__bottom {
+	margin-top: 8px;
+	display: inline-block;
+	justify-content: space-between;
+}
+
+.authorization__input {
+	margin-bottom: 8px;
+	width: 245px;
+	height: 32px;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+}
+
+.authorization__submit {
+	width: 120px;
+	height: 30px;
+
+	border: 1px solid #000;
+	color: #FFFFFF;
+	background: linear-gradient(90deg, #39aea9 0, #4580b3 100%) no-repeat;
+	border: 1px solid #39aea9;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+	box-sizing: border-box;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.authorization__text {
+	width: 50px;
+	height: 19px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.confirmation {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+}
+
+.confirmation-container {
+	background: #FFFFFF;
+	padding: 12px 12px 0px 15px;
+	width: 273px;
+	height: 319px;
+	box-shadow: 4px 4px 4px #4f4f4f;
+}
+
+.confirmation__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 70px;
+}
+
+.confirmation__close {
+	width: 16px;
+	height: 16px;
+	background-image: url("./img/close-icon.svg");
+	background-position: center;
+}
+
+.confirmation__bottom {
+	margin-top: 8px;
+	display: inline-block;
+	justify-content: space-between;
+}
+
+.confirmation__input {
+	margin-bottom: 8px;
+	width: 245px;
+	height: 32px;
+	border: 1px solid #000000;
+	box-sizing: border-box;
+}
+
+.confirmation__submit {
+	width: 62px;
+	height: 30px;
+
+	border: 1px solid #000;
+	color: #FFFFFF;
+	background: linear-gradient(90deg, #39aea9 0, #4580b3 100%) no-repeat;
+	border: 1px solid #39aea9;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+	box-sizing: border-box;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.confirmation__text {
+	width: 50px;
+	height: 19px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
