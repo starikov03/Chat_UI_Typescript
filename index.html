@@ -18,8 +18,8 @@
         <div class="dialog">
             <div class="container">
                 <div class="dialog__top">
-                    <button class="dialog__btn-settings">Настройки</button>
-                    <button class="dialog__btn-exit">Выйти</button>
+                    <button class="dialog__btn-settings">Settings</button>
+                    <button class="dialog__btn-exit">Sigh in</button>
                 </div>
                 <div class="dialog__message-box">
 
@@ -28,7 +28,7 @@
 
                 </div>
                 <form class="dialog__bottom" onsubmit="return false">
-                    <input type="text" class="dialog__message-input" placeholder="сообщение..">
+                    <input type="text" class="dialog__message-input" placeholder="Enter your message here..">
                     <button class="dialog__message-submit" type="submit">-></button>
                 </form>
             </div>
@@ -37,27 +37,31 @@
         <div class="settings">
             <div class="settings-container">
                 <div class="settings__top">
-                    <p class="settings__text">Настройки</p>
+                    <p class="settings__text">Settings</p>
                     <button class="settings__close"></button>
                 </div>
-                <p class="settings__text">Имя в чате</p>
+                <p class="settings__text">Name in the chat</p>
                 <div class="settings__bottom">
-                    <input type="text" class="settings__input" placeholder="Введите имя">
+                    <input type="text" class="settings__input" placeholder="Enter your name">
                     <button class="settings__submit">-></button>
                 </div>
+                <div class="Notification">Name successfully changed!</div>
             </div>
         </div>
 
         <div class="authorization">
             <div class="authorization-container">
                 <div class="authorization__top">
-                    <p class="authorization__text">Авторизация</p>
+                    <p class="authorization__text">Authorization</p>
                     <button class="authorization__close"></button>
                 </div>
-                <p class="authorization__text">Почта:</p>
+                <p class="authorization__text">Email:</p>
                 <div class="authorization__bottom">
-                    <input type="text" class="authorization__input" placeholder="Введите почту">
-                    <button class="authorization__submit">Получить код</button>
+                    <input type="text" class="authorization__input" placeholder="Enter your email">
+                    <button class="authorization__submit">Get the code</button>
+                </div>
+                <div class="hasCode">Already have a code?
+                    <span class="Enter">Enter code</span>
                 </div>
             </div>
         </div>
@@ -65,13 +69,13 @@
         <div class="confirmation">
             <div class="confirmation-container">
                 <div class="confirmation__top">
-                    <p class="confirmation__text">Подтверждение</p>
+                    <p class="confirmation__text">Confirmation</p>
                     <button class="confirmation__close"></button>
                 </div>
-                <p class="confirmation__text">Код:</p>
+                <p class="confirmation__text">Code:</p>
                 <div class="confirmation__bottom">
-                    <input type="text" class="confirmation__input" placeholder="Введите код">
-                    <button class="confirmation__submit">Войти</button>
+                    <input type="text" class="confirmation__input" placeholder="Enter code">
+                    <button class="confirmation__submit">Save code</button>
                 </div>
             </div>
         </div>
@@ -79,7 +83,17 @@
         <template id="tmpl">
             <li class="dialog__personal_message dialog__message dialog__delivered_message">
                 <div class="message-inner" bis_skin_checked="1">
-                    <div class="userNoSelect" bis_skin_checked="1">Я:</div>
+                    <div class="userNoSelect personalMessage" bis_skin_checked="1"></div>
+                    <div class="dialog__message-text"></div>
+                </div>
+                <span class="dialog__message-time"></span>
+            </li>
+        </template>
+
+        <template id="tmp2">
+            <li class="dialog__someone_message dialog__message dialog__delivered_message">
+                <div class="message-inner" bis_skin_checked="1">
+                    <div class="userNoSelect" bis_skin_checked="1"></div>
                     <div class="dialog__message-text"></div>
                 </div>
                 <span class="dialog__message-time"></span>
